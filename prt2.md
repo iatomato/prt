@@ -17,9 +17,10 @@ root@yangqi:~#
 ```
 ```
 root@yangqi:/opt# mkdir tmp
-root@yangqi:/opt# chmod 770 tmp
+root@yangqi:/opt# chmod -R ug+rwx tmp
+root@yangqi:/opt# chmod -R o-rwx tmp
 root@yangqi:/opt# ls -l
-total 28
+total 32
 drwxr-xr-x 3 root root    4096 Mar 24 01:43 aa
 drwxr-xr-x 3 root root    4096 Mar 24 00:52 aaa
 drwxr-xr-x 2 abc  root    4096 Mar 24 01:29 abc
@@ -27,8 +28,10 @@ drwxr-xr-x 3 root root    4096 Mar 24 00:49 data1
 drwxr-xr-x 2 root root    4096 Mar 24 01:25 nginx1.8.5
 -rw-r--r-- 1 root root       0 Mar 24 00:57 test3
 drwxr-xr-x 2 root testabc 4096 Mar 24 01:33 testabc
-drwxrwx--- 2 root root    4096 Mar 24 01:49 tmp
+drwxrwx--- 2 root root    4096 Mar 24 07:55 tmp
+drwxr-xr-x 2 root root    4096 Mar 24 02:00 tmp1
 root@yangqi:/opt# 
+
 ```
 ```
 root@yangqi:/opt# mkdir /opt/tmp1
