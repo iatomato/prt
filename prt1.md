@@ -24,6 +24,17 @@ root@yangqi:/#
 root@yangqi:/# mkdir opt/abc
 root@yangqi:/# useradd abc
 root@yangqi:~# chown abc /opt/abc
+root@yangqi:/opt# stat abc
+  File: abc
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: fd00h/64768d	Inode: 794501      Links: 2
+Access: (0755/drwxr-xr-x)  Uid: ( 1001/     abc)   Gid: (    0/    root)
+Access: 2021-03-24 01:29:19.477063322 +0000
+Modify: 2021-03-24 01:29:19.477063322 +0000
+Change: 2021-03-24 01:32:30.664986399 +0000
+ Birth: -
+root@yangqi:/opt# 
+
 ```
 ```
 root@yangqi:~# mkdir /opt/testabc
