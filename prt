@@ -1,0 +1,43 @@
+```
+root@esr0:~# ls -al
+total 60
+drwx------  4 root root  4096 Mar 23 03:28 .
+drwxr-xr-x 20 root root  4096 Mar 21 13:08 ..
+-rw-------  1 root root 12812 Mar 24 00:28 .bash_history
+-rw-r--r--  1 root root  3106 Dec  5  2019 .bashrc
+-rw-------  1 root root    28 Mar 23 00:39 .lesshst
+-rw-r--r--  1 root root   161 Dec  5  2019 .profile
+drwxr-xr-x  3 root root  4096 Mar 21 13:13 snap
+drwx------  2 root root  4096 Mar 21 13:12 .ssh
+-rw-------  1 root root 12827 Mar 23 03:28 .viminfo
+```
+```
+root@esr0:~# vim /etc/hostname
+
+yangqi
+~
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+~                                                                                                                                                     
+-- INSERT --                                           1,1           All
+
+root@esr0:~# hostnamectl
+   Static hostname: yangqi
+Transient hostname: esr0
+         Icon name: computer-vm
+           Chassis: vm
+```
