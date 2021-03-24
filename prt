@@ -1,4 +1,10 @@
 ```
+ryan@allens:~$ sc list
+sql0	ryan@192.168.122.121
+esr0	ryan@192.168.122.232
+ryan@allens:~$ sc esr0
+```
+```
 rebot:
 
 ryan@yangqi:~$ hostname
