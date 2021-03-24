@@ -34,17 +34,18 @@ root@yangqi:/opt#
 
 ```
 ```
-root@yangqi:/opt# mkdir /opt/tmp1
-root@yangqi:/opt# chmod -R 773 tmp
-root@yangqi:/opt# stat tmp
-  File: tmp
+root@yangqi:/opt# chmod 751 tmp1
+root@yangqi:/opt# stat tmp1
+  File: tmp1
   Size: 4096      	Blocks: 8          IO Block: 4096   directory
-Device: fd00h/64768d	Inode: 794510      Links: 2
-Access: (0773/drwxrwx-wx)  Uid: (    0/    root)   Gid: (    0/    root)
-Access: 2021-03-24 02:00:43.848434905 +0000
-Modify: 2021-03-24 01:49:37.424112142 +0000
-Change: 2021-03-24 02:00:43.848434905 +0000
+Device: fd00h/64768d	Inode: 660654      Links: 2
+Access: (0751/drwxr-x--x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2021-03-24 08:00:50.784823390 +0000
+Modify: 2021-03-24 08:00:50.784823390 +0000
+Change: 2021-03-24 08:01:37.836299799 +0000
  Birth: -
+root@yangqi:/opt# 
+
 root@yangqi:/opt#
 ```
 ```
