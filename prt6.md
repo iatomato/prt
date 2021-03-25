@@ -53,3 +53,27 @@ root@yangqi:/etc/apache2/sites-enabled# curl -x192.168.122.232:80 doc.yangqi.com
 </body></html>
 root@yangqi:/etc/apache2/sites-enabled#
 ```
+```
+        RewriteEngine On
+        RewriteCond %{HTTP_HOST} !^yangqi.com$
+        RewriteRule ^/(.*)$ http://yangqi.com/$1 [R=301,L]
+
+        ExpiresActive On
+        ExpiresByType images/jpeg "access plus 2 hours"
+        ExpiresDefault "now plus 0 min"
+
+        SetEnvIf Request_URL ".*\.jpeg$" img
+
+root@yangqi:/etc/apache2/sites-enabled# curl -x127.0.0.1:80 yangqi.com/images/this.jpeg -I
+HTTP/1.1 200 OK
+Date: Thu, 25 Mar 2021 11:18:50 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Thu, 25 Mar 2021 11:13:30 GMT
+ETag: "0-5be5a815968fc"
+Accept-Ranges: bytes
+Cache-Control: max-age=0
+Expires: Thu, 25 Mar 2021 11:18:50 GMT
+Content-Type: image/jpeg
+
+root@yangqi:/etc/apache2/sites-enabled# 
+```
