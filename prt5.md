@@ -77,3 +77,35 @@ Loaded Modules:
  alias_module (shared)
 ryan@yangqi:/usr/local/apache2/bin$ 
 ```
+```
+<Directory />
+    AllowOverride none
+    Require all granted
+</Directory>
+
+
+</Directory>
+
+#
+# DirectoryIndex: sets the file that Apache will serve if a directory
+# is requested.
+#
+<IfModule dir_module>
+    DirectoryIndex index.html index.htm index.php
+</IfModule>
+
+    # probably should define those extensions to indicate media types:
+    #
+    AddType application/x-compress .Z
+    AddType application/x-gzip .gz .tgz
+    AddType application/x-httpd-php .php
+
+root@yangqi:/etc/apache2/bin/# ./apachectl -k restart 
+root@yangqi:/var/www/html/# vim index.php
+<?php
+echo "this is php\n";
+?>
+root@yangqi:/etc/apache2# curl 192.168.122.232/index.php
+this is php
+root@yangqi:/etc/apache2# 
+```
