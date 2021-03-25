@@ -101,12 +101,10 @@ ryan@yangqi:/usr/local/apache2/bin$
     AddType application/x-httpd-php .php
 
 root@yangqi:/etc/apache2/bin/# ./apachectl -k restart 
-root@yangqi:/var/www/html/# vim index.php
-<?php
-echo "this is php\n";
-?>
-root@yangqi:/etc/apache2# curl 192.168.122.232/index.php
-this is php
+root@yangqi:/var/www/html/# vim index.html
+This is www.yangqi.com
+root@yangqi:/etc/apache2# curl 192.168.122.232/index.html
+This is www.yangqi.com
 root@yangqi:/etc/apache2# 
 ```
 ```
@@ -116,10 +114,10 @@ root@yangqi:/etc/apache2#
         ErrorLog /var/log/apache2/1/error.log
         CustomLog /var/log/apache2/1/access.log combined
 </VirtualHost>
+root@yangqi:/var/www/dev/# vim index.html
+This is www.yangqi.com
 root@yangqi:~# curl www.yangqi.com
-<?php
-echo "this is www.yangqi.com\n";
-?>
+This is www.yangqi.com
 root@yangqi:~# 
 
 ```
