@@ -109,3 +109,17 @@ root@yangqi:/etc/apache2# curl 192.168.122.232/index.php
 this is php
 root@yangqi:/etc/apache2# 
 ```
+```
+<VirtualHost *:80>
+        ServerName www.yangqi.com
+        DocumentRoot /var/www/dev
+        ErrorLog /var/log/apache2/1/error.log
+        CustomLog /var/log/apache2/1/access.log combined
+</VirtualHost>
+root@yangqi:~# curl www.yangqi.com
+<?php
+echo "this is www.yangqi.com\n";
+?>
+root@yangqi:~# 
+
+```
