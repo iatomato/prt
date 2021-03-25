@@ -1,4 +1,19 @@
 ```
+ryan@yangqi:~$ sudo groupadd mysql
+ryan@yangqi:~$ sudo useradd -M -s /sbin/nologin mysql -g mysql
+ryan@yangqi:~$ sudo systemctl enable mysqld
+ryan@yangqi:~$ sudo systemctl start mysqld
+ryan@yangqi:~$ tar zxf mysql-5.6.36.tar.gz -C /usr/src
+ryan@yangqi:~$ sduo cd /usr/src/mysql-5.6.36/
+ryan@yangqi:~$ sudo cmake \
+ -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+ -DSYSCONFDIR=/etc/ -DDEFAULT_CHARSET=utf8 \
+ -DDEFAULT_COLLATION=utf8_general_ci \
+ -DWITH_EXTRA_CHARSETS=all
+ryan@yangqi:~$ sudo make && make install
+ryan@yangqi:~$ sudo chown -R mysql:mysql /usr/local/mysql
+```
+```
 `apache2 install`
 
 ryan@yangqi:~/httpd-2.4.46$ tar -xzvf httpd-2.4.46.tar.gz
