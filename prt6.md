@@ -77,3 +77,13 @@ Content-Type: image/jpeg
 
 root@yangqi:/etc/apache2/sites-enabled# 
 ```
+```
+root@yangqi:~# php -v
+PHP 7.4.3 (cli) (built: Oct  6 2020 15:47:56) ( NTS )
+Copyright (c) The PHP Group
+Zend Engine v3.4.0, Copyright (c) Zend Technologies
+    with Zend OPcache v7.4.3, Copyright (c), by Zend Technologies
+root@yangqi:~# php main.php
+this is test for php
+root@yangqi:~# 
+```
