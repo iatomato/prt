@@ -129,7 +129,8 @@ root@yangqi:/etc/nginx/conf.d/host#
 root@yangqi:/etc/nginx/conf.d/host# printf "yangqi:$(openssl passwd -crypt 123456)\n" >> /var/630/htpasswd
 root@yangqi:/etc/nginx/conf.d# cat /var/630/htpasswd
 yangqi:j/Jy2ygV2OY/E
-root@yangqi:/etc/nginx/conf.d# 
+root@yangqi:/etc/nginx/conf.d#
+```
 ```
 server {
     listen       80;
