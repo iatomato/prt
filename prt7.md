@@ -119,6 +119,18 @@ It's works
 root@yangqi:/etc/nginx/conf.d/host# 
 ```
 ```
+    location / {
+        root   /var/org/nginx/test/html;
+        index  index.html index.htm index.php;
+        auth_basic "Nginx Basic HTTP Test For yangqi.org";
+        auth_basic_user_file /var/630/htpasswd;
+        autoindex on;
+        }
+root@yangqi:/etc/nginx/conf.d/host# printf "yangqi:$(openssl passwd -crypt 123456)\n" >> /var/630/htpasswd
+root@yangqi:/etc/nginx/conf.d# cat /var/630/htpasswd
+yangqi:j/Jy2ygV2OY/E
+root@yangqi:/etc/nginx/conf.d# 
+```
 server {
     listen       80;
     server_name  yangqi.org test.yangqi.org;
