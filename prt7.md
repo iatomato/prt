@@ -121,6 +121,31 @@ root@yangqi:/etc/nginx/conf.d/host#
 ```
 server {
     listen       80;
+    server_name  yangqi.org test.yangqi.org;
+
+        if ($host = test.yangqi.org)
+        {
+                rewrite /(.*) http://test.yangqi.org/$1 permanent;
+        }
+root@yangqi:/etc/nginx/conf.d# nginx -t && service nginx reload
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+root@yangqi:/etc/nginx/conf.d# 
+root@yangqi:/etc/nginx/conf.d# curl -x127.0.0.1:80 test.yangqi.org -I
+HTTP/1.1 301 Moved Permanently
+Server: nginx/1.19.8
+Date: Fri, 26 Mar 2021 02:20:42 GMT
+Content-Type: text/html
+Content-Length: 169
+Connection: keep-alive
+Location: http://test.yangqi.org/
+
+root@yangqi:/etc/nginx/conf.d# 
+
+```
+```
+server {
+    listen       80;
     server_name  yangqi.org;
 
     #charset koi8-r;
