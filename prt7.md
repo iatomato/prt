@@ -1,4 +1,4 @@
-```
+```bash
 root@yangqi:~# mysql --version
 mysql  Ver 8.0.23-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))
 root@yangqi:~# systemctl enable mysql.service
