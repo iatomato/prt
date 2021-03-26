@@ -118,3 +118,32 @@ root@yangqi:/etc/nginx/conf.d/host# curl yangqi.org
 It's works
 root@yangqi:/etc/nginx/conf.d/host# 
 ```
+```
+server {
+    listen       80;
+    server_name  yangqi.org;
+
+    #charset koi8-r;
+    access_log  /tmp/yangqi.log  main;
+
+    location / {
+root@yangqi:/etc/nginx/conf.d/host# curl yangqi.org
+It's works
+root@yangqi:/etc/nginx/conf.d/host# 
+root@yangqi:/etc/nginx/conf.d/host# ll /tmp
+total 52
+drwxrwxrwt 12 root root 4096 Mar 26 02:06 ./
+drwxr-xr-x 21 root root 4096 Mar 24 02:56 ../
+drwxrwxrwt  2 root root 4096 Mar 26 00:08 .font-unix/
+drwxrwxrwt  2 root root 4096 Mar 26 00:08 .ICE-unix/
+drwx------  3 root root 4096 Mar 26 00:08 snap.lxd/
+drwx------  3 root root 4096 Mar 26 00:08 systemd-private-6586f307
+drwx------  3 root root 4096 Mar 26 00:08 systemd-private-6586f307
+drwx------  3 root root 4096 Mar 26 00:08 systemd-private-6586f307
+drwxrwxrwt  2 root root 4096 Mar 26 00:08 .Test-unix/
+drwx------  2 root root 4096 Mar 26 01:43 tmux-0/
+drwxrwxrwt  2 root root 4096 Mar 26 00:08 .X11-unix/
+drwxrwxrwt  2 root root 4096 Mar 26 00:08 .XIM-unix/
+-rw-r--r--  1 root root  190 Mar 26 02:08 yangqi.log
+root@yangqi:/etc/nginx/conf.d/host# 
+```
