@@ -93,15 +93,28 @@ Content-Type: text/html
 Content-Length: 612
 Last-Modified: Tue, 09 Mar 2021 15:27:51 GMT
 Connection: keep-alive
-
+root@yangqi:/etc/nginx/# vim *\.conf
     keepalive_timeout  65;
 
     #gzip  on;
 
-    include /etc/nginx/conf.d/*.conf;
+    include /etc/nginx/conf.d/host*.conf;
 }
 ~                                                                                            
 ~ 
-root@yangqi:/etc/nginx# vim *\.conf
+root@yangqi:/etc/nginx/conf.d/host# vim test.conf
+server {
+    listen       80;
+    server_name  yangqi.org;
 
+    #charset koi8-r;
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /var/org/nginx/test/html;
+        index  index.html index.htm;
+        }
+root@yangqi:/etc/nginx/conf.d/host# curl yangqi.org
+It's works
+root@yangqi:/etc/nginx/conf.d/host# 
 ```
